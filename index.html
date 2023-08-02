@@ -1,0 +1,45 @@
+<html>
+<head>
+	<title>even odd finder by we </title>
+	<style>
+		*{font-size:70px;font-family:cambria;}
+		body{background-color:lightblue;}
+		h1{background-color:black;color:white;width:50%;border-radius:30px;}
+	</style>
+	<script>
+		function find ()
+		{
+			event.preventDefault();
+			let num=document.getElementById("num");
+			let ans=document.getElementById("ans");
+		
+			if(num.value=="")
+			{
+			
+				alert("number is empty");
+				ans.innerHTML="";
+				num.focus();
+				return;
+			}
+			let n=parseInt(num.value);
+			let msg="";
+			if(n%2==0)
+				msg="even";
+			else
+				msg="odd"
+			ans.innerHTML=msg;
+		}
+	</script>
+</head>
+<body>
+<center>
+	<h1>even odd finder </h1>
+	<form onsubmit="find()">
+	<input type="number"placeholder="enter an integer" id="num"/>
+	<br><br>
+	<input type="submit"value ="Find Even/odd"/>
+	</form>
+	<h2 id="ans"/>
+</center>
+</body>
+</html>
